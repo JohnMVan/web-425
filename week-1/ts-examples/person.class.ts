@@ -1,3 +1,10 @@
+// Title:  person.class.ts
+// Author:  John Vanhessche
+// Date 6 January 2023
+// Description:  person.class.ts file for assignment
+
+
+
 import { IPerson } from "./person.interface";
 
 class Person implements IPerson {
