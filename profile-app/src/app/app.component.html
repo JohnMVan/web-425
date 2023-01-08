@@ -21,20 +21,17 @@
 </nav>
 
 <!--container for image and details-->
-<div class="container">
-  <br><br>
+<div role="main" class="container">
+  <br /><br />
+
+    <h2>{{ assignment }}</h2>
+
+  <br /><br />
   <div class="row">
-    <div class="col-sm-12">
-      <h2>{{ assignment }}</h2>
-    </div>
-  </div>  
-  <div class="row">
-    <!--Right side of block-->
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <app-my-image></app-my-image>
     </div>
-    <!--Left side of block-->
-    <div class="col-sm-6">
+    <div class="col-sm-8">
       <app-my-details></app-my-details>
     </div>
   </div>
