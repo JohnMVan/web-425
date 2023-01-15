@@ -1,0 +1,24 @@
+/*
+Title:  about.component.css
+Author: John Vanhessche
+Date 15 January 2023
+Description:  CSS file for the about component.
+*/
+
+.apa-reference {
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.align-center {
+    text-align: center;   
+}
+
+.composer-container {
+    padding-top: 50px;
+}
+
+.main-img {
+    width: 200px;
+    height: 200px;
+}
