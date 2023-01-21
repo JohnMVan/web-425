@@ -1,0 +1,12 @@
+/*
+Title:  signin.component.css
+Author: John Vanhessche
+Date 21 January 2023
+Description:  CSS file for the signin component.
+*/
+
+.signin-container {
+    width: 35%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
