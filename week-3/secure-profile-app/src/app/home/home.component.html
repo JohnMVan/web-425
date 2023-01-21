@@ -1,0 +1,52 @@
+<!-- 
+  Title:  home.component.html
+  Author: John Vanhessche
+  Date: 21 January 2023
+  Description:  html file for the home component. 
+-->
+
+<!--Nav bar element-->
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  
+  <!--container for image and details-->
+  <div role="main" class="container">
+    <br /><br />
+  
+      <h2>Exercise 3.3 - Passing Data to Routes, Part 2</h2>
+  
+    <br /><br />
+    
+    <div class="row" *ngIf="isLoggedIn; else showError">     <!--this is an if/else statement.  if isLoggedIn = true, image and details are displayed.  if false the showError template is displayed-->
+      <!--Left side-->                                      <!--for now, the value of isLoggedIn is located in app.component.ts-->
+      <div class="col-sm-4">
+        <app-my-image></app-my-image>
+      </div>
+      <!--Right side-->
+      <div class="col-sm-8">
+        <app-my-details></app-my-details>
+      </div>
+    </div>
+  
+    <ng-template #showError>        <!--This template only shows if the value of IsLoggedIn is false-->
+      <div class="row">
+        <div class="col-sm-12">
+          <h4 class="alert alert-danger">
+            You are not authorized to view ths content
+          </h4>
+        </div>
+      </div>
+    </ng-template>
+  
+  </div>
