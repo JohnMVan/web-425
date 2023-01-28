@@ -1,0 +1,38 @@
+<!--
+Title:  composer-list.component.html
+Author: John Vanhessche
+Date 28 January 2023
+Description:  HTML file for the composer component.
+-->
+
+<!--table to display composers-->
+<div class="row">
+    <div class="col-sm-12">
+
+        <!-- 4.3 Added the search box -->
+        <div class="textSearch">
+            <input type="text" id="textSearch" class="form-control" placeholder="Search by name" [formControl]="txtSearchControl"/> 
+        </div>
+
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Composer ID</th>       <!--added new column header for composer id on 3.2 part 1-->
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Genre</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let composer of composers">
+                <tr>
+                    <td scope="row">
+                        <a routerLink="/composer-details/{{ composer.composerId }}">    <!--loops to get composer id for new column in table, added on 3.2 part 1-->
+                            {{composer.composerId}}                                     <!--the anchor link makes the composerID field on the table clickable-->
+                        </a>                                                            <!--the {{composer.composerId}} is the id that's displayed on table.-->
+                    </td>                                                               <!--the idea is that once we click on the composer ID, we show the details of that composer-->
+                    <td scope="row">{{ composer.fullName}}</td>
+                    <td>{{ composer.genre}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
