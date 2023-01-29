@@ -1,0 +1,13 @@
+/*
+Title:  composer-list.component.css
+Author: John Vanhessche
+Date 28 January 2023
+Description:  CSS file for the composer component.
+*/
+
+/* Added in 4.3 */
+.textSearch {
+    width: 30%;
+    float: right;
+    margin-bottom: 5px;
+}
